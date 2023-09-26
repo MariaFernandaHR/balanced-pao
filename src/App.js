@@ -1,13 +1,17 @@
 import logo from './logo.svg';
+import RECIPES from './app/shared/recipes';
+
 import './App.css';
 
 function App() {
+  const { title,image,url,text,ingredients,preparation }= RECIPES;
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={RECIPES[0].image} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          {RECIPES[0].title}{RECIPES[0].text}
         </p>
         <a
           className="App-link"
